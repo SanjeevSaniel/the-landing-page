@@ -20,12 +20,12 @@ const HomePage = () => {
   return (
     <main>
       <section
-        className={`flex justify-center items-center md:gap-40 px-4 md:px-20 py-10 bg-amber-200`}>
+        className={`flex justify-center items-center md:gap-40 px-4 md:px-20 py-20 bg-amber-200`}>
         <p
           className={clsx(
             salsa.className,
             'text-5xl',
-          )}>{`hey, I'm Sanjeev Saniel.`}</p>
+          )}>{`hey, I'm Sanjeev Kujur.`}</p>
         <div>
           <Image
             width={200}
@@ -33,7 +33,7 @@ const HomePage = () => {
             src={profileImage}
             alt='Profile'
             style={imageStyle}
-            className='shadow-lg'
+            className='drop-shadow-2xl'
           />
         </div>
       </section>
@@ -101,7 +101,6 @@ const HomePage = () => {
           </ul>
         </div>
       </section>
-      HomePage
     </main>
   );
 };
