@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <section className='bg-amber-200 px-10 py-10 font-medium'>
+    <section className='bg-amber-200 px-20 py-10 font-medium'>
       <div>&copy; {new Date().getFullYear()}, SK. Connecting is better.</div>
     </section>
   );
