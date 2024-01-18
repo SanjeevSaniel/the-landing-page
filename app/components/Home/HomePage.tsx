@@ -69,6 +69,29 @@ const HomePage = () => {
       },
     ];
 
+    const interests = [
+      {
+        id: 1,
+        icon: 'https://img.icons8.com/fluency/48/wallet.png',
+        name: 'Personal finance',
+      },
+      {
+        id: 2,
+        icon: 'https://img.icons8.com/parakeet/48/knowledge-sharing.png',
+        name: 'Knowledge about mythology',
+      },
+      {
+        id: 3,
+        icon: 'https://img.icons8.com/plasticine/100/compact-camera.png',
+        name: 'Photography',
+      },
+      {
+        id: 4,
+        icon: 'https://img.icons8.com/pastel-glyph/64/blockchain-technology--v4.png',
+        name: 'Technology and architecture',
+      },
+    ];
+
     return (
       <main>
         <section
@@ -90,11 +113,11 @@ const HomePage = () => {
           </div>
         </section>
         {/* TODO: Career */}
-        <section className={`grid grid-cols-3 p-10`}>
+        <section className={`grid grid-cols-1 md:grid-cols-3 p-10`}>
           <div className='text-center text-3xl'>
-            <h1>Career</h1>
+            <h1 className='pb-4 md:pb-0 font-medium'>Career</h1>
           </div>
-          <div className='col-span-2 text-[1.2rem] space-y-6'>
+          <div className='col-span-2 text-[1.2rem] space-y-6 max-w-[80%]'>
             <p>
               I have <strong>3+ years</strong> of professional experience in
               software engineering building and providing CRM solutions
@@ -106,14 +129,15 @@ const HomePage = () => {
             </p>
           </div>
         </section>
+
         {/* TODO: Skills */}
-        <section className={`grid grid-cols-3 p-10`}>
+        <section className={`grid grid-cols-1 md:grid-cols-3 p-10`}>
           <div className='text-center text-3xl'>
-            <h1>Skills</h1>
+            <h1 className='font-medium'>Skills</h1>
           </div>
           <div className='col-span-2 text-[1.2rem] space-y-6'>
-            <div className='flex gap-6'>
-              <div>
+            <div className='flex flex-col md:flex-row gap-6'>
+              <div className='m-auto md:m-0'>
                 <h1 className='w-[220px] bg-amber-300 px-3 py-2 border-solid border-gray-200 border-[1px]'>
                   Technical
                 </h1>
@@ -134,8 +158,8 @@ const HomePage = () => {
                   ))}
                 </ul>
               </div>
-              <div className='max-w-[220px]'>
-                <h1 className='w-[220px] bg-amber-300 px-3 py-2 border-solid border-gray-200 border-[1px]'>
+              <div className='max-w-[220px] m-auto md:m-0'>
+                <h1 className='bg-amber-300 px-3 py-2 border-solid border-gray-200 border-[1px]'>
                   Interpersonal
                 </h1>
                 <div className='p-3'>
@@ -159,18 +183,29 @@ const HomePage = () => {
             </div>
           </div>
         </section>
+
         {/* TODO: Interests */}
-        <section className={`grid grid-cols-3 p-10`}>
+        <section className={`grid  grid-cols-1 md:grid-cols-3 p-10`}>
           <div className='text-center text-3xl'>
-            <h1>Interests</h1>
+            <h1 className='font-medium'>Interests</h1>
           </div>
           <div className='col-span-2 text-[1.2rem] space-y-6'>
-            <ul>
-              <li>Personal finance</li>
-              <li>Knowledge about mythology</li>
-              <li>Photography</li>
-              <li>Technology and architecture</li>
-            </ul>
+            <div className='p-3'>
+              {interests.map((interest) => (
+                <div
+                  key={interest.id}
+                  className='flex gap-3 mb-2'>
+                  <Image
+                    width={24}
+                    height={24}
+                    src={interest.icon}
+                    alt={interest.name}
+                  />
+
+                  <p className='leading-6'>{interest.name}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
       </main>
