@@ -9,7 +9,7 @@ import Head from 'next/head';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'The Landing Page',
+  title: 'The Page',
   description: 'The Landing Page',
 };
 

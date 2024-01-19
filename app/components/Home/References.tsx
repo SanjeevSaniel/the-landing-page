@@ -35,7 +35,7 @@ const References = () => {
       {referenceLinks.map((reference) => (
         <div
           key={reference.id}
-          className='flex gap-1'>
+          className='flex gap-2 bg-amber-300 px-2 py-1 rounded-lg w-fit'>
           <Image
             width={20}
             height={20}
@@ -44,7 +44,7 @@ const References = () => {
           />
           <Link
             href={reference.url}
-            className='text-[15px] text-gray-600 hover:underline'>
+            className='text-[15px] text-gray-700 hover:underline'>
             {reference.description}
           </Link>
         </div>
