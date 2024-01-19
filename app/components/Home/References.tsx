@@ -40,7 +40,7 @@ const References = () => {
             alt={reference.name}
           />
           <Link
-            href='https://www.linkedin.com/in/sanjeevsaniel/'
+            href={reference.url}
             className='text-[15px] text-gray-600 hover:underline'>
             {reference.description}
           </Link>
