@@ -3,6 +3,7 @@ import Image from 'next/image';
 import clsx from 'clsx';
 import { Salsa } from 'next/font/google';
 import About from './About';
+import References from './References';
 
 const salsa = Salsa({
   weight: '400',
@@ -22,11 +23,27 @@ const HomePage = () => {
     <main>
       <section
         className={`flex justify-center items-center md:gap-40 px-4 md:px-20 py-20 bg-amber-200`}>
-        <p
-          className={clsx(
-            salsa.className,
-            'text-5xl',
-          )}>{`hey, I'm Sanjeev Kujur.`}</p>
+        <div>
+          <span
+            className={clsx(
+              salsa.className,
+              'text-5xl md:pl-5',
+            )}>{`hey, I'm Sanjeev Kujur.`}</span>
+
+          {/* <div className='flex items-center gap-2 my-2'>
+            <FontAwesomeIcon
+              icon={faLinkedinIn}
+              className='w-4'
+            />
+            <Link
+              href='https://www.linkedin.com/in/sanjeevsaniel/'
+              className='text-[20px]'>
+              LinkedIn
+            </Link>
+          </div> */}
+          <References />
+        </div>
+
         <div>
           <Image
             width={200}
@@ -38,7 +55,6 @@ const HomePage = () => {
           />
         </div>
       </section>
-
       <About />
     </main>
   );

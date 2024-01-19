@@ -81,10 +81,10 @@ const About = () => {
     <div>
       {/* TODO: Career */}
       <section className={`grid grid-cols-1 md:grid-cols-3 p-10`}>
-        <div className='text-center text-3xl'>
+        <div className='text-center text-[40px]'>
           <h1 className='pb-4 md:pb-0 font-medium'>Career</h1>
         </div>
-        <div className='col-span-2 text-[1.2rem] space-y-6 max-w-[80%]'>
+        <div className='col-span-2 text-[1.2rem] space-y-6 md:max-w-[80%]'>
           <p>
             I have <strong>3+ years</strong> of professional experience in
             software engineering building and providing CRM solutions alongwith
@@ -99,7 +99,7 @@ const About = () => {
 
       {/* TODO: Skills */}
       <section className={`grid grid-cols-1 md:grid-cols-3 p-10`}>
-        <div className='text-center text-3xl'>
+        <div className='text-center text-[40px]'>
           <h1 className='font-medium'>Skills</h1>
         </div>
         <div className='col-span-2 text-[1.2rem] space-y-6'>
@@ -153,7 +153,7 @@ const About = () => {
 
       {/* TODO: Interests */}
       <section className={`grid  grid-cols-1 md:grid-cols-3 p-10`}>
-        <div className='text-center text-3xl'>
+        <div className='text-center text-[40px]'>
           <h1 className='font-medium'>Interests</h1>
         </div>
         <div className='col-span-2 text-[1.2rem] space-y-6'>
