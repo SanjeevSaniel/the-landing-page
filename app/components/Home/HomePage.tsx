@@ -27,7 +27,7 @@ const HomePage = () => {
           <span
             className={clsx(
               salsa.className,
-              'text-5xl md:pl-5',
+              'text-5xl md:pl-0',
             )}>{`hey, I'm Sanjeev Kujur.`}</span>
 
           {/* <div className='flex items-center gap-2 my-2'>
