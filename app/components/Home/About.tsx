@@ -1,5 +1,12 @@
 import React from 'react';
 import Image from 'next/image';
+import { Montserrat } from 'next/font/google';
+
+const montserrat = Montserrat({
+  weight: '400',
+  subsets: ['latin'],
+  display: 'swap',
+});
 
 const About = () => {
   const technicalSkills = [
@@ -78,13 +85,13 @@ const About = () => {
   ];
 
   return (
-    <div>
+    <div className={montserrat.className}>
       {/* TODO: Career */}
       <section className={`grid grid-cols-1 md:grid-cols-3 p-10`}>
         <div className='text-center text-[40px]'>
           <h1 className='pb-4 md:pb-0 font-medium'>Career</h1>
         </div>
-        <div className='col-span-2 text-[1.2rem] space-y-6 md:max-w-[80%]'>
+        <div className='col-span-2 text-[18px] space-y-6 md:max-w-[80%]'>
           <p>
             I have <strong>3+ years</strong> of professional experience in
             software engineering building and providing CRM solutions alongwith
@@ -102,7 +109,7 @@ const About = () => {
         <div className='text-center text-[40px]'>
           <h1 className='font-medium'>Skills</h1>
         </div>
-        <div className='col-span-2 text-[1.2rem] space-y-6'>
+        <div className='col-span-2 text-[18px] space-y-6'>
           <div className='flex flex-col md:flex-row gap-6'>
             <div className='m-auto md:m-0'>
               <h1 className='w-[220px] bg-amber-300 px-3 py-2 border-solid border-gray-200 border-[1px]'>
@@ -156,7 +163,7 @@ const About = () => {
         <div className='text-center text-[40px]'>
           <h1 className='font-medium'>Interests</h1>
         </div>
-        <div className='col-span-2 text-[1.2rem] space-y-6'>
+        <div className='col-span-2 text-[18px] space-y-6'>
           <div className='p-3'>
             {interests.map((interest) => (
               <div

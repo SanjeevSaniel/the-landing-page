@@ -9,21 +9,24 @@ const References = () => {
       icon: 'https://img.icons8.com/fluency/48/linkedin.png',
       name: 'LinkedIn',
       url: 'https://www.linkedin.com/in/sanjeevsaniel/',
-      description: 'connect and build networks',
+      username: 'sanjeevsaniel',
+      description: 'Connect and build networks',
     },
     {
       id: 2,
       icon: 'https://img.icons8.com/ios-filled/50/github.png',
       name: 'Github',
       url: 'https://github.com/SanjeevSaniel',
-      description: 'collaborate and code',
+      username: 'sanjeevsaniel',
+      description: 'Collaborate and code',
     },
     {
       id: 3,
       icon: 'https://www.pexels.com/assets/_svg/logo-5ee7c1d7e25a1c5066520202eb5c41bd4c0a479e9a68911aa54d785c2e22d565.svg',
       name: 'Pexels',
       url: 'https://www.pexels.com/@sanjeev-saniel-875428/',
-      description: 'capture moments and share',
+      username: 'sanjeev-saniel-875428',
+      description: 'Capture moments and share',
     },
   ];
 

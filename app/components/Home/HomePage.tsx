@@ -13,7 +13,7 @@ const salsa = Salsa({
 
 const imageStyle = {
   borderRadius: '20%',
-  border: '2px solid #fde68a',
+  border: '5px solid #f6d860',
 };
 
 const HomePage = () => {
