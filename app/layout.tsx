@@ -4,6 +4,7 @@ import './globals.css'
 import Navbar from '@/app/Navbar';
 import React from 'react';
 import Footer from './components/Home/Footer';
+import Head from 'next/head';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -19,6 +20,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
+      <Head>
+        <link
+          rel='icon'
+          href='https://img.icons8.com/arcade/64/overview-pages-2.png'
+        />
+      </Head>
       <body className={inter.className}>
         <Navbar />
         <main>{children}</main>
