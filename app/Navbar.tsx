@@ -10,7 +10,7 @@ const salsa = Salsa({
 const Navbar = () => (
   <div className={salsa.className}>
     <nav
-      className={`flex justify-between px-4 md:px-20 py-3 bg-amber-200 text-xl font-semibold`}>
+      className={`flex justify-between px-4 md:px-20 py-3 bg-amber-200 text-xl font-semibold z-20`}>
       SK
     </nav>
   </div>

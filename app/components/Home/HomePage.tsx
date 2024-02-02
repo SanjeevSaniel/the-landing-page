@@ -2,8 +2,9 @@ import React from 'react';
 import Image from 'next/image';
 import clsx from 'clsx';
 import { Salsa } from 'next/font/google';
-import About from './About';
+// import About from './About';
 import References from './References';
+import Carrot from './Carrot';
 
 const salsa = Salsa({
   weight: '400',
@@ -55,7 +56,8 @@ const HomePage = () => {
           />
         </div>
       </section>
-      <About />
+      <Carrot />
+      {/* <About /> */}
     </main>
   );
 };

@@ -10,7 +10,7 @@ const References = () => {
       name: 'LinkedIn',
       url: 'https://www.linkedin.com/in/sanjeevsaniel/',
       username: 'sanjeevsaniel',
-      description: 'Connect and build networks',
+      description: 'Connect and build network',
     },
     {
       id: 2,
@@ -20,14 +20,14 @@ const References = () => {
       username: 'sanjeevsaniel',
       description: 'Collaborate and code',
     },
-    {
-      id: 3,
-      icon: 'https://www.pexels.com/assets/_svg/logo-5ee7c1d7e25a1c5066520202eb5c41bd4c0a479e9a68911aa54d785c2e22d565.svg',
-      name: 'Pexels',
-      url: 'https://www.pexels.com/@sanjeev-saniel-875428/',
-      username: 'sanjeev-saniel-875428',
-      description: 'Capture moments and share',
-    },
+    // {
+    //   id: 3,
+    //   icon: 'https://www.pexels.com/assets/_svg/logo-5ee7c1d7e25a1c5066520202eb5c41bd4c0a479e9a68911aa54d785c2e22d565.svg',
+    //   name: 'Pexels',
+    //   url: 'https://www.pexels.com/@sanjeev-saniel-875428/',
+    //   username: 'sanjeev-saniel-875428',
+    //   description: 'Capture moments and share',
+    // },
   ];
 
   return (
