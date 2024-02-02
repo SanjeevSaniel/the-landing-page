@@ -10,6 +10,14 @@ import {
   Tooltip,
 } from '@nextui-org/react';
 import Link from 'next/link';
+import { Montserrat } from 'next/font/google';
+import clsx from 'clsx';
+
+const montserrat = Montserrat({
+  weight: '500',
+  subsets: ['latin'],
+  display: 'swap',
+});
 
 const Interests = () => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -66,7 +74,7 @@ const Interests = () => {
             className='border-none bg-background/60 dark:bg-default-100/50 max-w-[1200px] m-auto p-4'
             shadow='lg'>
             <CardBody>
-              <div className='grid grid-cols-1 md:grid-cols-2 gap-2 justify-center'>
+              <div className='grid grid-cols-1 md:grid-cols-2 gap-6 justify-center'>
                 <div className='relative'>
                   <Image
                     alt='Album cover'
@@ -78,12 +86,12 @@ const Interests = () => {
                   />
                 </div>
 
-                <div className='flex flex-col gap-4 justify-between p-4'>
-                  <div className='flex flex-col gap-2'>
-                    <h1 className='text-4xl pb-3'>
+                <div className='flex flex-col flex-wrap gap-4 justify-between m-auto p-4'>
+                  <div className='flex flex-col items-center gap-2'>
+                    <h1 className={clsx(montserrat.className, 'text-4xl pb-3')}>
                       {photos[currentPage - 1].title}
                     </h1>
-                    <p className='flex gap-2 items-center pl-2'>
+                    <p className='flex gap-2 items-center'>
                       <div className='w-[15px] inline-flex'>
                         <svg
                           xmlns='http://www.w3.org/2000/svg'
@@ -91,9 +99,11 @@ const Interests = () => {
                           <path d='M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z' />
                         </svg>
                       </div>
-                      <span>{photos[currentPage - 1].location}</span>
+                      <span className='text-gray-600'>
+                        {photos[currentPage - 1].location}
+                      </span>
                     </p>
-                    <p className='mt-2 pl-6'>
+                    <p className='mt-2'>
                       {photos[currentPage - 1].description}
                     </p>
                   </div>
