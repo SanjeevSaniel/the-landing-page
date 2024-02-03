@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   Card,
   CardBody,
@@ -19,7 +19,7 @@ const montserrat = Montserrat({
   display: 'swap',
 });
 
-const Interests = () => {
+const InterestsPage = () => {
   const [currentPage, setCurrentPage] = useState(1);
 
   const photos = [
@@ -28,7 +28,7 @@ const Interests = () => {
       sourceUrl:
         'https://images.pexels.com/photos/17965125/pexels-photo-17965125/free-photo-of-atal-foot-over-bridge.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
       title: 'Atal Pedestrian Bridge',
-      location: 'Sabarmati Riverfront, Ahmedabad, Gujarat',
+      location: 'Sabarmati Riverfront, Ahmedabad, Gujarat, India',
       description: 'Pedestrian triangular truss bridge.',
     },
     {
@@ -36,7 +36,7 @@ const Interests = () => {
       sourceUrl:
         'https://images.pexels.com/photos/16090635/pexels-photo-16090635/free-photo-of-james-princep-memorial.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
       title: 'James Princep Memorial',
-      location: 'Kolkata, West Bengal',
+      location: 'Kolkata, West Bengal, India',
       description:
         'The monument is one of the finest examples of colonial architecture in Kolkata.',
     },
@@ -45,13 +45,50 @@ const Interests = () => {
       sourceUrl:
         'https://images.pexels.com/photos/17465412/pexels-photo-17465412/free-photo-of-konark-sun-temple.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
       title: 'Konark Sun Temple',
-      location: 'Konark, Odisha',
+      location: 'Konark, Odisha, India',
+      description: `Built in the 13th century, it is one of India's most famous Brahman sanctuaries.`,
+    },
+    {
+      id: 4,
+      sourceUrl:
+        'https://images.pexels.com/photos/17724358/pexels-photo-17724358.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      title: 'Teesta Valley Forest',
+      location: 'Teesta Valley Forest, West Bengal, India',
+      description: `Built in the 13th century, it is one of India's most famous Brahman sanctuaries.`,
+    },
+    {
+      id: 5,
+      sourceUrl:
+        'https://images.pexels.com/photos/16287591/pexels-photo-16287591/free-photo-of-st-paul-s-cathedral.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      title: `St. Paul's Cathedral Church`,
+      location: 'Kolkata, West Bengal, India',
+      description: `Built in the 13th century, it is one of India's most famous Brahman sanctuaries.`,
+    },
+    {
+      id: 6,
+      sourceUrl:
+        'https://images.pexels.com/photos/19665118/pexels-photo-19665118/free-photo-of-museum.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      title: 'Kala Bhoomi - Odisha Crafts Museum',
+      location: 'Bhubaneswar, Odisha, India',
       description: `Built in the 13th century, it is one of India's most famous Brahman sanctuaries.`,
     },
   ];
 
+  useEffect(() => {
+    setTimeout(() => {
+      currentPage === photos.length
+        ? setCurrentPage(1)
+        : setCurrentPage((prev) => prev + 1);
+    }, 5000);
+  }, [currentPage, photos.length]);
+
   return (
-    <div className='pt-[10rem] px-6 pb-20 bg-amber-200'>
+    <div
+      className={clsx(
+        montserrat.className,
+        'pt-[10rem] px-6 pb-20 bg-amber-200',
+      )}>
+      <h1 className='text-[5rem] text-center mb-10'>Photography</h1>
       <div className='flex flex-col gap-10 items-center '>
         <div className='flex flex-col gap-2'>
           <div className='flex items-center gap-2 px-2 py-1 rounded-lg w-fit'>
@@ -66,7 +103,7 @@ const Interests = () => {
             <Link
               href={'https://www.pexels.com/@sanjeev-saniel-875428/'}
               className='text-[15px] text-gray-700 hover:underline font-medium'>
-              Pexels
+              More on Pexels
             </Link>
           </div>
           <Card
@@ -88,7 +125,7 @@ const Interests = () => {
 
                 <div className='flex flex-col flex-wrap gap-4 justify-between m-auto p-4'>
                   <div className='flex flex-col items-center gap-2'>
-                    <h1 className={clsx(montserrat.className, 'text-4xl pb-3')}>
+                    <h1 className='text-4xl text-center pb-3'>
                       {photos[currentPage - 1].title}
                     </h1>
                     <p className='flex gap-2 items-center'>
@@ -103,7 +140,7 @@ const Interests = () => {
                         {photos[currentPage - 1].location}
                       </span>
                     </p>
-                    <p className='mt-2'>
+                    <p className='mt-2 text-wrap text-center'>
                       {photos[currentPage - 1].description}
                     </p>
                   </div>
@@ -137,7 +174,7 @@ const Interests = () => {
         <div className='flex flex-wrap gap-4 items-center'>
           <Pagination
             showShadow
-            total={3}
+            total={photos.length}
             initialPage={1}
             variant='flat'
             color='warning'
@@ -150,4 +187,4 @@ const Interests = () => {
   );
 };
 
-export default Interests;
+export default InterestsPage;

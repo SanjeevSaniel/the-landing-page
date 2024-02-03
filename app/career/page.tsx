@@ -8,7 +8,7 @@ const montserrat = Montserrat({
   display: 'swap',
 });
 
-const Career = () => {
+const CareerPage = () => {
   const technicalSkills = [
     {
       id: 7,
@@ -87,7 +87,7 @@ const Career = () => {
   return (
     <div className={montserrat.className}>
       {/* TODO: Career */}
-      <section className={`grid grid-cols-1 md:grid-cols-3 p-10 pt-20`}>
+      <section className={`grid grid-cols-1 md:grid-cols-3 p-10 pt-[10rem]`}>
         <div className='text-center text-[40px]'>
           <h1 className='pb-4 md:pb-0 font-medium'>Career</h1>
         </div>
@@ -186,4 +186,4 @@ const Career = () => {
   );
 };
 
-export default Career;
+export default CareerPage;

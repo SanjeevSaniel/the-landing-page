@@ -1,8 +1,8 @@
 'use client';
 
 import React, { useState } from 'react';
-import Career from '../Career/Career';
-import Interests from './Interests';
+import CareerPage from '../../career/page';
+import InterestsPage from '../../interests/page';
 
 const Carrot = () => {
   const items = [
@@ -15,7 +15,8 @@ const Carrot = () => {
   return (
     <div className='flex flex-col relative'>
       <div className='flex'>
-        <div className={`flex items-center gap-6 p-2 absolute left-[28%] md:left-[40%] lg:left-[42%]`}>
+        <div
+          className={`flex items-center gap-6 p-2 absolute left-[28%] md:left-[40%] lg:left-[42%]`}>
           {items.map((item) => (
             <div
               key={item.id}
@@ -30,7 +31,11 @@ const Carrot = () => {
       </div>
 
       <div>
-        {currentItem.toLowerCase() === 'career' ? <Career /> : <Interests />}
+        {currentItem.toLowerCase() === 'career' ? (
+          <CareerPage />
+        ) : (
+          <InterestsPage />
+        )}
       </div>
     </div>
   );
