@@ -28,7 +28,7 @@ const InterestsPage = () => {
       sourceUrl:
         'https://images.pexels.com/photos/17965125/pexels-photo-17965125/free-photo-of-atal-foot-over-bridge.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
       title: 'Atal Pedestrian Bridge',
-      location: 'Sabarmati Riverfront, Ahmedabad, Gujarat, India',
+      location: 'Ahmedabad, Gujarat, India',
       description: 'Pedestrian triangular truss bridge.',
     },
     {
@@ -74,13 +74,19 @@ const InterestsPage = () => {
     },
   ];
 
-  useEffect(() => {
-    setTimeout(() => {
-      currentPage === photos.length
-        ? setCurrentPage(1)
-        : setCurrentPage((prev) => prev + 1);
-    }, 5000);
-  }, [currentPage, photos.length]);
+  // setTimeout(() => {
+  //     currentPage === photos.length
+  //       ? setCurrentPage(1)
+  //       : setCurrentPage((prev) => prev + 1);
+  //   }, 5000);
+
+  // const handlePhotosSlide = (n) => {
+    
+  // };
+
+  // useEffect(() => {
+  //   handlePhotosSlide(currentPage);
+  // }, [currentPage]);
 
   return (
     <div
@@ -88,7 +94,9 @@ const InterestsPage = () => {
         montserrat.className,
         'pt-[10rem] px-6 pb-20 bg-amber-200',
       )}>
-      <h1 className='text-[5rem] text-center mb-10'>Photography</h1>
+      <h1 className='text-[2.5rem] md:text-[5rem] text-center mb-10'>
+        Photography
+      </h1>
       <div className='flex flex-col gap-10 items-center '>
         <div className='flex flex-col gap-2'>
           <div className='flex items-center gap-2 px-2 py-1 rounded-lg w-fit'>
@@ -124,11 +132,11 @@ const InterestsPage = () => {
                 </div>
 
                 <div className='flex flex-col flex-wrap gap-4 justify-between m-auto p-4'>
-                  <div className='flex flex-col items-center gap-2'>
+                  <div className='flex flex-col items-center gap-2 text-center'>
                     <h1 className='text-4xl text-center pb-3'>
                       {photos[currentPage - 1].title}
                     </h1>
-                    <p className='flex gap-2 items-center'>
+                    <p className='flex gap-2 items-start'>
                       <div className='w-[15px] inline-flex'>
                         <svg
                           xmlns='http://www.w3.org/2000/svg'
@@ -136,7 +144,7 @@ const InterestsPage = () => {
                           <path d='M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z' />
                         </svg>
                       </div>
-                      <span className='text-gray-600'>
+                      <span className='text-gray-600 text-wrap'>
                         {photos[currentPage - 1].location}
                       </span>
                     </p>
