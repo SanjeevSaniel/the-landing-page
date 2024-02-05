@@ -54,17 +54,17 @@ const HomePage = () => {
       <section
         className={clsx(
           salsa.className,
-          'flex flex-col gap-6 bg-green-200 px-20 py-16',
+          'flex flex-col items-center gap-10 bg-green-200 px-20 py-16',
         )}>
-        <p className='text-xl'>More info</p>
-        <div className='flex flex-wrap gap-6'>
+        <p className='text-xl text-black/90'>More info</p>
+        <div className='flex justify-center gap-6'>
           {links.map((l) => (
             <Link
               key={l.id}
               href={l.path}>
-              <Card className='rounded-sm'>
+              <Card className='hover:text-amber-500 rounded-sm'>
                 <CardBody>
-                  <p className='px-6 py-4 text-xl'>{l.label}</p>
+                  <p className='px-6 py-4 text-xl font-semibold'>{l.label}</p>
                 </CardBody>
               </Card>
             </Link>
