@@ -33,7 +33,7 @@ export default function RootLayout({
           <div className='sticky top-0'>
             <Navbar />
           </div>
-          <main>{children}</main>
+          <main className='h-fit'>{children}</main>
           <Footer />
         </Providers>
       </body>

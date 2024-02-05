@@ -1,10 +1,10 @@
 import React from 'react';
-import Image from 'next/image';
 import clsx from 'clsx';
 import { Salsa } from 'next/font/google';
-// import About from './About';
 import References from './References';
-import Carrot from './Carrot';
+import Image from 'next/image';
+import Link from 'next/link';
+import { Card, CardBody } from '@nextui-org/react';
 
 const salsa = Salsa({
   weight: '400',
@@ -19,6 +19,11 @@ const imageStyle = {
 
 const HomePage = () => {
   const profileImage = `https://media.licdn.com/dms/image/C5603AQE7PKuFSh_o5g/profile-displayphoto-shrink_400_400/0/1601485975862?e=1710979200&v=beta&t=Zk_bnDxlLMfm9bdaF20xVUlgD0jfOxUp38mhK8vhCpw`;
+
+  const links = [
+    { id: 1, label: 'Career', path: '/career' },
+    { id: 2, label: 'Interests', path: '/interests' },
+  ];
 
   return (
     <main>
@@ -45,8 +50,27 @@ const HomePage = () => {
           />
         </div>
       </section>
-      
-      
+
+      <section
+        className={clsx(
+          salsa.className,
+          'flex flex-col gap-6 bg-green-200 px-20 py-16',
+        )}>
+        <p className='text-xl'>More info</p>
+        <div className='flex flex-wrap gap-6'>
+          {links.map((l) => (
+            <Link
+              key={l.id}
+              href={l.path}>
+              <Card className='rounded-sm'>
+                <CardBody>
+                  <p className='px-6 py-4 text-xl'>{l.label}</p>
+                </CardBody>
+              </Card>
+            </Link>
+          ))}
+        </div>
+      </section>
     </main>
   );
 };

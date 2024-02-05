@@ -78,7 +78,7 @@ const PhotosCollectionMobile = () => {
     <div className={clsx(montserrat.className, 'px-6 py-10 bg-amber-200')}>
       <div className='flex md:hidden flex-col gap-10 items-center '>
         <div className='flex flex-col gap-2'>
-          <div className='flex items-center gap-2 px-2 py-1 rounded-lg w-fit'>
+          {/* <div className='flex items-center gap-2 px-2 py-1 rounded-lg w-fit'>
             <Image
               width={20}
               height={20}
@@ -92,7 +92,7 @@ const PhotosCollectionMobile = () => {
               className='text-[15px] text-gray-700 hover:underline font-medium'>
               More on Pexels
             </Link>
-          </div>
+          </div> */}
           <Card
         isBlurred
         className='border-none bg-background/60 dark:bg-default-100/50 max-w-[1200px] m-auto p-4'

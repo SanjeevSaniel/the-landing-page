@@ -26,7 +26,7 @@ const Navbar = () => {
       <nav
         className={`flex justify-between px-4 md:px-20 py-3 bg-amber-200 text-xl font-semibold z-20`}>
         <Link href='/'>SK</Link>
-        <ul className='hidden md:flex gap-4'>
+        {/* <ul className='hidden md:flex gap-4'>
           {links.map((link) => (
             <Link
               key={link.id}
@@ -39,7 +39,7 @@ const Navbar = () => {
               {link.label}
             </Link>
           ))}
-        </ul>
+        </ul> */}
       </nav>
     </div>
   );
