@@ -32,7 +32,7 @@ const Navbar = () => {
               key={link.id}
               href={`${link.path}`}
               className={classnames({
-                'text-amber-600': link.path === currentPath,
+                'text-amber-500': link.path === currentPath,
                 'text-zinc-500': link.path !== currentPath,
                 'hover:text-amber-500 cursor-pointer': true,
               })}>

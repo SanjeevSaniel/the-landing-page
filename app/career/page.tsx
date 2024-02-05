@@ -87,7 +87,7 @@ const CareerPage = () => {
   return (
     <div className={montserrat.className}>
       {/* TODO: Career */}
-      <section className={`grid grid-cols-1 md:grid-cols-3 p-10 pt-[10rem]`}>
+      <section className={`grid grid-cols-1 md:grid-cols-3 p-10`}>
         <div className='text-center text-[40px]'>
           <h1 className='pb-4 md:pb-0 font-medium'>Career</h1>
         </div>

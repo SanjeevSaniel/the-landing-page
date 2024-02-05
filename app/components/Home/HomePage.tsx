@@ -31,17 +31,6 @@ const HomePage = () => {
               'text-5xl md:pl-0',
             )}>{`hey, I'm Sanjeev Kujur.`}</span>
 
-          {/* <div className='flex items-center gap-2 my-2'>
-            <FontAwesomeIcon
-              icon={faLinkedinIn}
-              className='w-4'
-            />
-            <Link
-              href='https://www.linkedin.com/in/sanjeevsaniel/'
-              className='text-[20px]'>
-              LinkedIn
-            </Link>
-          </div> */}
           <References />
         </div>
 
@@ -56,8 +45,8 @@ const HomePage = () => {
           />
         </div>
       </section>
-      <Carrot />
-      {/* <About /> */}
+      
+      
     </main>
   );
 };
