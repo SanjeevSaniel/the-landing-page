@@ -28,7 +28,7 @@ export default function RootLayout({
           href='https://img.icons8.com/arcade/64/overview-pages-2.png'
         />
       </Head>
-      <body className={clsx(inter.className, 'relative bg-amber-200')}>
+      <body className={clsx(inter.className, 'relative bg-amber-200 text-black')}>
         <Providers>
           <div className='flex flex-col'>
             <div className='sticky top-0 z-30'>
