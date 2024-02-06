@@ -1,11 +1,11 @@
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import './globals.css'
 import Navbar from '@/app/Navbar';
-import React from 'react';
-import Footer from './components/Home/Footer';
-import Head from 'next/head';
 import clsx from 'clsx';
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
+import Head from 'next/head';
+import React from 'react';
+import Footer from './Footer';
+import './globals.css';
 import { Providers } from './providers';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -30,11 +30,15 @@ export default function RootLayout({
       </Head>
       <body className={clsx(inter.className, 'relative')}>
         <Providers>
-          <div className='sticky top-0'>
-            <Navbar />
+          <div className='flex flex-col'>
+            <div className='sticky top-0 z-30'>
+              <Navbar />
+            </div>
+            <main>{children}</main>
+            <div>
+              <Footer />
+            </div>
           </div>
-          <main className='h-fit'>{children}</main>
-          <Footer />
         </Providers>
       </body>
     </html>
