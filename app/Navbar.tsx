@@ -24,7 +24,7 @@ const Navbar = () => {
   return (
     <div className={salsa.className}>
       <nav
-        className={`flex justify-between px-4 md:px-20 py-3 bg-amber-200 text-xl font-semibold z-20`}>
+        className={`flex justify-between px-4 md:px-20 py-3 text-xl font-semibold z-20`}>
         <Link href='/' className="hover:text-amber-500 transition-all duration-500 drop-shadow-xl">SK</Link>
         {/* <ul className='hidden md:flex gap-4'>
           {links.map((link) => (

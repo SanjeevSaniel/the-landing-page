@@ -4,7 +4,7 @@ import { Salsa } from 'next/font/google';
 import References from './References';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Card, CardBody } from '@nextui-org/react';
+import QuickLinksCard from './QuickLinksCard';
 
 const salsa = Salsa({
   weight: '400',
@@ -22,7 +22,7 @@ const HomePage = () => {
 
   const links = [
     { id: 1, label: 'Career', path: '/career' },
-    { id: 2, label: 'Interests', path: '/interests' },
+    { id: 2, label: 'Others', path: '/interests' },
   ];
 
   return (
@@ -54,7 +54,7 @@ const HomePage = () => {
       <section
         className={clsx(
           salsa.className,
-          'flex flex-col items-center gap-10 bg-green-200 px-20 py-16',
+          'flex flex-col items-center gap-10 bg-green-300 px-20 py-16',
         )}>
         <p className='text-xl text-black/90'>More info</p>
         <div className='flex justify-center gap-6'>
@@ -62,11 +62,10 @@ const HomePage = () => {
             <Link
               key={l.id}
               href={l.path}>
-              <Card className='hover:text-amber-500 rounded-sm'>
-                <CardBody>
-                  <p className='px-6 py-4 text-xl font-semibold'>{l.label}</p>
-                </CardBody>
-              </Card>
+              <QuickLinksCard
+                label={l.label}
+                path={l.path}
+              />
             </Link>
           ))}
         </div>
