@@ -16,7 +16,7 @@ const QuickLinksCard = ({ label, path }: Props) => {
   return (
     <div>
       <Card
-        className='bg-green-200 text-black rounded-lg hover:-translate-y-1 transition-all duration-500'
+        className='px-4 py-2 bg-green-200 text-black rounded-lg hover:-translate-y-1 transition-all duration-500'
         onMouseOver={() => setArrowDirection(1)}
         onMouseOut={() => setArrowDirection(0)}>
         <CardBody className='flex flex-col justify-center items-center'>
