@@ -2,15 +2,13 @@ import React from 'react';
 import {
   Card,
   CardHeader,
-  CardBody,
   CardFooter,
   Image,
-  Button,
   Tooltip,
 } from '@nextui-org/react';
 import Link from 'next/link';
 
-const PhotosCollection = ({profileLink}: {profileLink: string}) => {
+const PhotosCollection = ({ profileLink }: { profileLink: string }) => {
   const photos = [
     {
       id: 1,
