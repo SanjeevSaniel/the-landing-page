@@ -5,8 +5,11 @@ import { Tooltip } from '@nextui-org/react';
 
 const Footer = () => {
   return (
-    <section className='flex justify-between items-center px-20 py-5 font-medium'>
-      <div>&copy; {new Date().getFullYear()}, SK. Connecting is better.</div>
+    <section className='flex justify-between items-end px-6 md:px-20 py-5 text-sm text-gray-700'>
+      <div>
+        <div>&copy; {new Date().getFullYear()}, SK.</div>
+        <div>Connecting is better.</div>
+      </div>
       <Tooltip
         placement='top'
         content='Next.js'
