@@ -44,6 +44,7 @@ const References = () => {
           />
           <Link
             href={reference.url}
+            target='_blank'
             className='text-[15px] text-gray-700 hover:underline'>
             {reference.description}
           </Link>

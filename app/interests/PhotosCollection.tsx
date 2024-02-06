@@ -17,6 +17,10 @@ const PhotosCollection = ({ profileLink }: { profileLink: string }) => {
       title: 'Atal Bridge',
       location: 'Ahmedabad, Gujarat, India',
       description: 'Pedestrian triangular truss bridge.',
+      iso: '320',
+      focalLength: '13',
+      aperture: 'ƒ/2.2',
+      shutterSpeed: '1/35',
     },
     {
       id: 2,
@@ -25,6 +29,10 @@ const PhotosCollection = ({ profileLink }: { profileLink: string }) => {
       title: 'Konark Sun Temple',
       location: 'Konark, Odisha, India',
       description: `Built in the 13th century, it is one of India's most famous Brahman sanctuaries.`,
+      iso: '25',
+      focalLength: '23',
+      aperture: 'f/1.8',
+      shutterSpeed: '1/1476',
     },
     {
       id: 3,
@@ -33,6 +41,10 @@ const PhotosCollection = ({ profileLink }: { profileLink: string }) => {
       title: `St. Paul's Cathedral Church`,
       location: 'Kolkata, West Bengal, India',
       description: `Built in the 13th century, it is one of India's most famous Brahman sanctuaries.`,
+      iso: '50',
+      focalLength: '4.67',
+      aperture: 'f/2.0',
+      shutterSpeed: '1/1100',
     },
     {
       id: 4,
@@ -42,6 +54,10 @@ const PhotosCollection = ({ profileLink }: { profileLink: string }) => {
       location: 'Kolkata, West Bengal, India',
       description:
         'The monument is one of the finest examples of colonial architecture in Kolkata.',
+      iso: '50',
+      focalLength: '4.67',
+      aperture: 'f/2.0',
+      shutterSpeed: '1/1000',
     },
     {
       id: 5,
@@ -50,6 +66,10 @@ const PhotosCollection = ({ profileLink }: { profileLink: string }) => {
       title: 'Teesta Valley Forest',
       location: 'Darjeeling, West Bengal, India',
       description: `Built in the 13th century, it is one of India's most famous Brahman sanctuaries.`,
+      iso: '50',
+      focalLength: '23',
+      aperture: 'f/1.8',
+      shutterSpeed: '1/1000',
     },
     {
       id: 6,
@@ -58,6 +78,10 @@ const PhotosCollection = ({ profileLink }: { profileLink: string }) => {
       title: 'Kala Bhoomi - Odisha Crafts Museum',
       location: 'Bhubaneswar, Odisha, India',
       description: `Built in the 13th century, it is one of India's most famous Brahman sanctuaries.`,
+      iso: '',
+      focalLength: '',
+      aperture: '',
+      shutterSpeed: '',
     },
     {
       id: 7,
@@ -66,6 +90,10 @@ const PhotosCollection = ({ profileLink }: { profileLink: string }) => {
       title: 'Qutub Minar',
       location: 'Delhi, India',
       description: 'A minaret and victory tower.',
+      iso: '80',
+      focalLength: '24',
+      aperture: 'f/1.8',
+      shutterSpeed: '1/1200',
     },
     {
       id: 8,
@@ -74,6 +102,10 @@ const PhotosCollection = ({ profileLink }: { profileLink: string }) => {
       title: 'Nehru Museum - IIT Kharagpur',
       location: 'Kharagpur, West Bengal, India',
       description: 'Nehru Museum',
+      iso: '30',
+      focalLength: '22',
+      aperture: 'f/1.8',
+      shutterSpeed: '1/1000',
     },
     {
       id: 9,
@@ -82,10 +114,12 @@ const PhotosCollection = ({ profileLink }: { profileLink: string }) => {
       title: 'Statue Of Unity',
       location: 'Kevadia, Gujarat, India',
       description: "The iron man of India's freedom struggle and unification",
+      iso: '25',
+      focalLength: '25',
+      aperture: 'f/1.8',
+      shutterSpeed: '1/1000',
     },
   ];
-
-  const tooltipInfo = <div>Tooltip</div>;
 
   return (
     <div className='flex flex-col gap-6 px-12'>
@@ -126,8 +160,38 @@ const PhotosCollection = ({ profileLink }: { profileLink: string }) => {
               <Tooltip
                 key={'top-end'}
                 placement={'top-end'}
-                content={tooltipInfo}
-                color='secondary'>
+                content={
+                  <div className='flex gap-2 p-2 opacity-1'>
+                    <div className='text-right text-sm text-gray-300'>
+                      <div>ISO:</div>
+                      <div>Focal length:</div>
+                      <div>Aperture:</div>
+                      <div>Shutter speed:</div>
+                    </div>
+
+                    <div className='text-white'>
+                      <div>{photos[c].iso ? photos[c].iso : <br />}</div>
+                      <div>
+                        {photos[c].focalLength ? (
+                          photos[c].focalLength + ' mm'
+                        ) : (
+                          <br />
+                        )}
+                      </div>
+                      <div>
+                        {photos[c].aperture ? photos[c].aperture : <br />}
+                      </div>
+                      <div>
+                        {photos[c].shutterSpeed ? (
+                          photos[c].shutterSpeed + ' s'
+                        ) : (
+                          <br />
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                }
+                className='p-0 bg-black/80'>
                 <div className='w-[30px] inline-flex bg-red-500 rounded-[100%]'>
                   <svg
                     xmlns='http://www.w3.org/2000/svg'
@@ -179,8 +243,30 @@ const PhotosCollection = ({ profileLink }: { profileLink: string }) => {
             <Tooltip
               key={'top-end'}
               placement={'top-end'}
-              content={tooltipInfo}
-              color='secondary'>
+              className='p-0 bg-black/80'
+              content={
+                <div className='flex gap-2 p-2 opacity-1'>
+                  <div className='text-right text-sm text-gray-300'>
+                    <div>ISO:</div>
+                    <div>Focal length:</div>
+                    <div>Aperture:</div>
+                    <div>Shutter speed:</div>
+                  </div>
+
+                  <div className='text-white'>
+                    <div>{photos[3].iso ? photos[3].iso : <br />}</div>
+                    <div>
+                      {photos[3].focalLength ? photos[3].focalLength : <br />}
+                    </div>
+                    <div>
+                      {photos[3].aperture ? photos[3].aperture : <br />}
+                    </div>
+                    <div>
+                      {photos[3].shutterSpeed ? photos[3].shutterSpeed : <br />}
+                    </div>
+                  </div>
+                </div>
+              }>
               <div className='w-[30px] inline-flex bg-red-500 rounded-[100%]'>
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
@@ -230,8 +316,30 @@ const PhotosCollection = ({ profileLink }: { profileLink: string }) => {
             <Tooltip
               key={'top-end'}
               placement={'top-end'}
-              content={tooltipInfo}
-              color='secondary'>
+              className='p-0 bg-black/80'
+              content={
+                <div className='flex gap-2 p-2 opacity-1'>
+                  <div className='text-right text-sm text-gray-300'>
+                    <div>ISO:</div>
+                    <div>Focal length:</div>
+                    <div>Aperture:</div>
+                    <div>Shutter speed:</div>
+                  </div>
+
+                  <div className='text-white'>
+                    <div>{photos[4].iso ? photos[4].iso : <br />}</div>
+                    <div>
+                      {photos[4].focalLength ? photos[4].focalLength : <br />}
+                    </div>
+                    <div>
+                      {photos[4].aperture ? photos[4].aperture : <br />}
+                    </div>
+                    <div>
+                      {photos[4].shutterSpeed ? photos[4].shutterSpeed : <br />}
+                    </div>
+                  </div>
+                </div>
+              }>
               <div className='w-[30px] inline-flex bg-red-500 rounded-[100%]'>
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
@@ -282,8 +390,34 @@ const PhotosCollection = ({ profileLink }: { profileLink: string }) => {
               <Tooltip
                 key={'top-end'}
                 placement={'top-end'}
-                content={tooltipInfo}
-                color='secondary'>
+                className='p-0 bg-black/80'
+                content={
+                  <div className='flex gap-2 p-2 opacity-1'>
+                    <div className='text-right text-sm text-gray-300'>
+                      <div>ISO:</div>
+                      <div>Focal length:</div>
+                      <div>Aperture:</div>
+                      <div>Shutter speed:</div>
+                    </div>
+
+                    <div className='text-white'>
+                      <div>{photos[c].iso ? photos[c].iso : <br />}</div>
+                      <div>
+                        {photos[c].focalLength ? photos[c].focalLength : <br />}
+                      </div>
+                      <div>
+                        {photos[c].aperture ? photos[c].aperture : <br />}
+                      </div>
+                      <div>
+                        {photos[c].shutterSpeed ? (
+                          photos[c].shutterSpeed
+                        ) : (
+                          <br />
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                }>
                 <div className='w-[30px] inline-flex bg-red-500 rounded-[100%]'>
                   <svg
                     xmlns='http://www.w3.org/2000/svg'
