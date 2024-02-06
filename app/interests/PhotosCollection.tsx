@@ -10,7 +10,7 @@ import {
 } from '@nextui-org/react';
 import Link from 'next/link';
 
-const PhotosCollection = () => {
+const PhotosCollection = ({profileLink}: {profileLink: string}) => {
   const photos = [
     {
       id: 1,
@@ -312,7 +312,7 @@ const PhotosCollection = () => {
           alt={'Pexels'}
         />
         <Link
-          href={'https://www.pexels.com/@sanjeev-saniel-875428/'}
+          href={profileLink}
           target='_blank'
           className='text-lg text-gray-700 hover:underline font-medium'>
           More on Pexels
