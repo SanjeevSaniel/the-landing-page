@@ -4,7 +4,8 @@ import React from 'react';
 import { Salsa } from 'next/font/google';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import classnames from 'classnames';
+// import classnames from 'classnames';
+import clsx from 'clsx';
 
 const salsa = Salsa({
   weight: '400',
@@ -22,7 +23,7 @@ const Navbar = () => {
   ];
 
   return (
-    <div className={salsa.className}>
+    <div className={clsx(salsa.className, 'bg-amber-200')}>
       <nav
         className={`flex justify-between px-4 md:px-20 py-3 text-xl font-semibold z-20`}>
         <Link href='/' className="hover:text-amber-500 transition-all duration-500 drop-shadow-xl">SK</Link>

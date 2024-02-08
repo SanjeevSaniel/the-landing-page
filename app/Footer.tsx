@@ -5,7 +5,7 @@ import { Tooltip } from '@nextui-org/react';
 
 const Footer = () => {
   return (
-    <section className='flex justify-between items-end px-6 md:px-20 py-5 text-sm text-gray-700'>
+    <section className='flex justify-between items-end px-6 md:px-20 py-3 text-sm text-gray-700 bg-amber-100'>
       <div>
         <div>&copy; {new Date().getFullYear()}, SK.</div>
         <div>Connecting is better.</div>

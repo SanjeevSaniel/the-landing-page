@@ -28,14 +28,14 @@ export default function RootLayout({
           href='https://img.icons8.com/arcade/64/overview-pages-2.png'
         />
       </Head>
-      <body className={clsx(inter.className, 'relative bg-amber-200 text-black')}>
+      <body className={clsx(inter.className, 'relative text-black')}>
         <Providers>
-          <div className='flex flex-col'>
-            <div className='sticky top-0 z-30'>
+          <div className='flex flex-col h-screen'>
+            <div className='sticky top-0 h-fit z-30'>
               <Navbar />
             </div>
             <main>{children}</main>
-            <div>
+            <div className='h-fit'>
               <Footer />
             </div>
           </div>
