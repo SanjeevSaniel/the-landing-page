@@ -2,7 +2,7 @@ import Navbar from '@/app/Navbar';
 import clsx from 'clsx';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import Head from 'next/head';
+// import Head from 'next/head';
 import React from 'react';
 import Footer from './Footer';
 import './globals.css';
@@ -22,12 +22,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <Head>
+      {/* <Head>
         <link
           rel='icon'
           href='https://img.icons8.com/arcade/64/overview-pages-2.png'
         />
-      </Head>
+      </Head> */}
       <body className={clsx(inter.className, 'relative text-black')}>
         <Providers>
           <div className='flex flex-col h-screen'>
