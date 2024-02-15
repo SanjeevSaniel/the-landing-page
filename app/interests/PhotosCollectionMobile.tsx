@@ -136,8 +136,8 @@ const PhotosCollectionMobile = () => {
   ];
 
   return (
-    <div className={clsx(montserrat.className, 'px-6 py-10 bg-amber-200')}>
-      <div className='flex md:hidden flex-col gap-10 items-center '>
+    <div className={clsx(montserrat.className, 'md:hidden px-6 py-10 bg-amber-200')}>
+      <div className='flex flex-col gap-10 items-center '>
         <div className='flex flex-col gap-2'>
           {/* <div className='flex items-center gap-2 px-2 py-1 rounded-lg w-fit'>
             <Image

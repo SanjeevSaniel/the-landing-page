@@ -165,7 +165,10 @@ const InterestsPage = () => {
     },
   ];
   return (
-    <div className={'max-w-[1440px] m-auto px-6 py-20 bg-amber-200'}>
+    <div
+      className={
+        'max-w-[1440px] m-auto px-6 py-20 bg-[rgb(214,108,131)] bg-gradient-to-r from-[rgba(214,108,131,.5)] to-[rgba(253,230,138,1)]'
+      }>
       <div
         className={clsx(
           montserrat.className,
@@ -184,7 +187,7 @@ const InterestsPage = () => {
           />
         </Link>
         <div className='ml-2 text-xl'>|</div>
-        <h1 className='text-[2.5rem] md:text-[5rem] text-center'>
+        <h1 className='text-[2.5rem] md:text-[5rem] text-center drop-shadow-xl'>
           Photography
         </h1>
       </div>
@@ -194,7 +197,7 @@ const InterestsPage = () => {
           montserrat.className,
           'hidden md:flex md:flex-col gap-10 my-10',
         )}>
-        <div className='flex justify-center items-center gap-10'>
+        <div className='flex justify-center items-center gap-12'>
           {/* <Link
           href={PROFILE_URL}
           target='_blank'>
@@ -211,16 +214,16 @@ const InterestsPage = () => {
           <h1
             className={clsx(
               kalam.className,
-              'text-[2.5rem] md:text-[4.5rem] text-gray-800 drop-shadow-md text-center',
+              'text-[2.5rem] md:text-[4.5rem] text-gray-800 drop-shadow-xl text-center',
             )}>
             Landscapes
           </h1>
 
           <div className='md:grid grid-cols-2 auto-rows-auto gap-3 bg-transparent'>
-            {PHOTOS_SET_1.map((c) => (
+            {PHOTOS_SET_1.map((c, index) => (
               <Card
                 key={c}
-                className='col-span-2 sm:col-span-1 w-[400px] h-[300px] drop-shadow-lg'>
+                className={`col-span-2 sm:col-span-1 w-[410px] h-[300px] drop-shadow-lg`}>
                 <CardHeader className='absolute z-10 top-5 left-4 flex-col !items-start'>
                   <div className='flex gap-2 items-center '>
                     <div className='w-[12px] ml-1 inline-flex'>
@@ -314,10 +317,10 @@ const InterestsPage = () => {
               montserrat.className,
               'md:grid grid-cols-3 auto-rows-auto gap-4 bg-transparent',
             )}>
-            {PHOTOS_SET_2.map((c) => (
+            {PHOTOS_SET_2.map((c, index) => (
               <Card
                 key={c}
-                className='col-span-3 sm:col-span-1 h-[300px] drop-shadow-lg'>
+                className={`col-span-3 sm:col-span-1 ${index === 3 ? 'h-[400px]' : 'h-[300px]'} drop-shadow-lg`}>
                 <CardHeader className='absolute z-10 top-5 left-4 flex-col !items-start'>
                   <div className='flex gap-2 items-center '>
                     <div className='w-[12px] ml-1 inline-flex'>
@@ -407,7 +410,7 @@ const InterestsPage = () => {
           <h1
             className={clsx(
               kalam.className,
-              'absolute left-[50%] bottom-[20%] text-[2.5rem] md:text-[4.5rem] text-gray-800 drop-shadow-md text-center',
+              'absolute left-[50%] bottom-[20%] text-[2.5rem] md:text-[4.5rem] text-gray-800 drop-shadow-xl text-center',
             )}>
             Architectures
           </h1>

@@ -35,7 +35,7 @@ const References = () => {
       {referenceLinks.map((reference) => (
         <div
           key={reference.id}
-          className='flex gap-2 bg-amber-300 px-2 py-1 rounded-lg w-fit'>
+          className='flex gap-2 hover:bg-amber-300 hover:scale-105 px-2 py-1 w-fit rounded-lg transition-all duration-300 ease-in-out'>
           <Image
             width={20}
             height={20}
@@ -45,7 +45,7 @@ const References = () => {
           <Link
             href={reference.url}
             target='_blank'
-            className='text-[15px] text-gray-700 hover:underline'>
+            className='text-[15px] text-gray-700 underline'>
             {reference.description}
           </Link>
         </div>
