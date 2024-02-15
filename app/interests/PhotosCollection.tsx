@@ -165,8 +165,8 @@ const PhotosCollection = ({ profileLink }: { profileLink: string }) => {
                     <div className='text-right text-sm text-gray-300'>
                       <div>ISO:</div>
                       <div>Focal length:</div>
-                      <div>Aperture:</div>
-                      <div>Shutter speed:</div>
+                  <div>Aperture:</div>
+                  <div>Shutter speed:</div>
                     </div>
 
                     <div className='text-white'>
