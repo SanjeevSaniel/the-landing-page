@@ -9,8 +9,9 @@ import {
 import Link from 'next/link';
 import { Montserrat, Kalam } from 'next/font/google';
 import clsx from 'clsx';
-import PhotosCollection from './PhotosCollection';
+// import PhotosCollection from './PhotosCollection';
 import PhotosCollectionMobile from './PhotosCollectionMobile';
+import Extras from './Extras';
 
 const montserrat = Montserrat({
   weight: '500',
@@ -25,7 +26,6 @@ const kalam = Kalam({
 
 const InterestsPage = () => {
   const PROFILE_URL = 'https://www.pexels.com/@sanjeev-saniel-875428/';
-
   const PHOTOS_SET_1 = [4, 8, 9, 10];
   const PHOTOS_SET_2 = [0, 1, 2, 3];
   const allPhotos = [
@@ -191,6 +191,8 @@ const InterestsPage = () => {
           Photography
         </h1>
       </div>
+
+      <PhotosCollectionMobile />
 
       <div
         className={clsx(
@@ -417,7 +419,8 @@ const InterestsPage = () => {
         </div>
       </div>
 
-      <PhotosCollectionMobile />
+      
+      <Extras profileLink={PROFILE_URL} photos={allPhotos} />
       {/* <PhotosCollection profileLink={PROFILE_URL} /> */}
     </div>
   );
